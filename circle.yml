@@ -7,9 +7,8 @@ orbs:
 workflows:
   build:
     jobs:
-      # "cypress" is the name of the imported orb
-      # "run" is the name of the job defined in Cypress orb
       - cypress/run:
+          name: Mochawesome
           post-steps:
             # merge generates JSON reports
             # into a single JSON report
@@ -18,3 +17,15 @@ workflows:
             - run: npm run generate:report
             - store_artifacts:
                 path: mochawesome-report
+
+      - cypress/run:
+          name: JUnit
+          command: npm run test:junit
+          # post-steps:
+          #   # merge generates JSON reports
+          #   # into a single JSON report
+          #   # and then generate static HTML report
+          #   - run: npm run merge:reports
+          #   - run: npm run generate:report
+          #   - store_artifacts:
+          #       path: mochawesome-report
