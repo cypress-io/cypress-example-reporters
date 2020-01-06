@@ -11,7 +11,8 @@
     "delete:reports": "rm cypress/results/* || true",
     "merge:reports": "mochawesome-merge 'cypress/results/*.json' > mochawesome.json",
     "generate:report": "marge mochawesome.json --reportFilename index.html",
-    "test:junit": "cypress run --reporter junit --reporter-options mochaFile=results/Cypress/junit-[hash].xml"
+    "test:junit": "cypress run --reporter junit --reporter-options mochaFile=results/Cypress/junit-[hash].xml",
+    "test:mochawesome": "npm test && npm run merge:reports && npm run generate:report"
   },
   "repository": {
     "type": "git",
