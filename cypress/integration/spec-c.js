@@ -8,7 +8,8 @@ describe('Third spec', () => {
   it('works again', () => {
     cy.wait(1000)
       .then(() => {
-        expect(true).to.be.true
+        // break on purpose to show failing test report
+        expect(true).to.be.false
       })
   })
 })
