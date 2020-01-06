@@ -21,11 +21,6 @@ workflows:
       - cypress/run:
           name: JUnit
           command: npm run test:junit
-          # post-steps:
-          #   # merge generates JSON reports
-          #   # into a single JSON report
-          #   # and then generate static HTML report
-          #   - run: npm run merge:reports
-          #   - run: npm run generate:report
-          #   - store_artifacts:
-          #       path: mochawesome-report
+          post-steps:
+            - store_test_results:
+                path: results
