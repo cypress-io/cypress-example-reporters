@@ -9,6 +9,7 @@ workflows:
     jobs:
       - cypress/run:
           name: Mochawesome
+          no-workspace: true
           post-steps:
             # merge generates JSON reports
             # into a single JSON report
@@ -21,6 +22,7 @@ workflows:
       - cypress/run:
           name: JUnit
           command: npm run test:junit
+          no-workspace: true
           post-steps:
             - store_test_results:
                 path: results
