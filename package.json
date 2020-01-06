@@ -24,5 +24,6 @@
   "homepage": "https://github.com/cypress-io/cypress-example-mochawesome#readme",
   "devDependencies": {
     "cypress": "3.8.1"
-  }
+  },
+  "private": true
 }
