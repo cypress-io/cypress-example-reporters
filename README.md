@@ -1,11 +1,11 @@
-# cypress-example-mochawesome [![renovate-app badge][renovate-badge]][renovate-app] [![CircleCI](https://circleci.com/gh/cypress-io/cypress-example-mochawesome/tree/master.svg?style=svg)](https://circleci.com/gh/cypress-io/cypress-example-mochawesome/tree/master)
+# cypress-example-reporters [![renovate-app badge][renovate-badge]][renovate-app] [![CircleCI](https://circleci.com/gh/cypress-io/cypress-example-reporters/tree/master.svg?style=svg)](https://circleci.com/gh/cypress-io/cypress-example-reporters/tree/master)
 > Example showing multiple test reports merged into a single Mochawesome report
 
 Read [Cypress Reporters Guide](https://on.cypress.io/reporters)
 
 ## CI
 
-The tests are executed on [CircleCI](https://circleci.com/gh/cypress-io/cypress-example-mochawesome), see configuration file [circle.yml](circle.yml). One job generates Mochawesome report, while the second one stores JUnit test results. Both jobs store automatic screenshots and videos.
+The tests are executed on [CircleCI](https://circleci.com/gh/cypress-io/cypress-example-reporters), see configuration file [circle.yml](circle.yml). One job generates Mochawesome report, while the second one stores JUnit test results. Both jobs store automatic screenshots and videos.
 
 ## Mochawesome
 

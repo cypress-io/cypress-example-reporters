@@ -1,5 +1,5 @@
 {
-  "name": "cypress-example-mochawesome",
+  "name": "cypress-example-reporters",
   "version": "1.0.0",
   "description": "Example showing multiple test reports merged into a single Mochawesome report",
   "main": "index.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cypress-io/cypress-example-mochawesome.git"
+    "url": "git+https://github.com/cypress-io/cypress-example-reporters.git"
   },
   "keywords": [
     "cypress",
@@ -24,9 +24,9 @@
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cypress-io/cypress-example-mochawesome/issues"
+    "url": "https://github.com/cypress-io/cypress-example-reporters/issues"
   },
-  "homepage": "https://github.com/cypress-io/cypress-example-mochawesome#readme",
+  "homepage": "https://github.com/cypress-io/cypress-example-reporters#readme",
   "devDependencies": {
     "cypress": "3.8.1",
     "mocha": "5.2.0",
