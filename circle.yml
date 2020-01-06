@@ -10,12 +10,17 @@ workflows:
       - cypress/run:
           name: Mochawesome
           no-workspace: true
+          # always store any test screenshots and videos
+          store_artifacts: true
           post-steps:
-            # merge generates JSON reports
-            # into a single JSON report
-            # and then generate static HTML report
-            - run: npm run merge:reports
-            - run: npm run generate:report
+            # we need to generate test reports in every case,
+            # even if (or especially if) the Cypress tests have failed
+            - run:
+                name: generate combined report
+                when: always
+                command: |
+                  npm run merge:reports
+                  npm run generate:report
             - store_artifacts:
                 path: mochawesome-report
 
@@ -23,6 +28,8 @@ workflows:
           name: JUnit
           command: npm run test:junit
           no-workspace: true
+          # always store any test screenshots and videos
+          store_artifacts: true
           post-steps:
             - store_test_results:
                 path: results
