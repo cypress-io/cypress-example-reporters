@@ -6,7 +6,11 @@
   "scripts": {
     "test": "cypress run",
     "cypress:run": "cypress run",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "pretest": "npm run delete:reports",
+    "delete:reports": "rm cypress/results/* || true",
+    "merge:reports": "mochawesome-merge 'cypress/results/*.json' > mochawesome.json",
+    "generate:report": "marge mochawesome.json --reportFilename index.html"
   },
   "repository": {
     "type": "git",
