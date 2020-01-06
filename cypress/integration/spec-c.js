@@ -9,7 +9,8 @@ describe('Third spec', () => {
     cy.wait(1000)
       .then(() => {
         // break on purpose to show failing test report
-        expect(true).to.be.false
+        // expect(true).to.be.false
+        expect(true).to.be.true
       })
   })
 })
