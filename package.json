@@ -30,7 +30,7 @@
   "homepage": "https://github.com/cypress-io/cypress-example-reporters#readme",
   "devDependencies": {
     "cypress": "4.5.0",
-    "mocha": "5.2.0",
+    "mocha": "7.1.2",
     "mochawesome": "4.1.0",
     "mochawesome-merge": "4.0.3",
     "mochawesome-report-generator": "4.1.0"
